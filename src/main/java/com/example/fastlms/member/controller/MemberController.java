@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -45,4 +46,18 @@ public class MemberController {
 
         return "/member/email_auth";
     }
+
+
+    @GetMapping("/member/info")
+    public String memberInfo() {
+        return "/member/info";
+    }
+
+    @RequestMapping("/member/login")
+    public String memberLogin() {
+        return "/member/login";
+    }
+
+
+
 }
